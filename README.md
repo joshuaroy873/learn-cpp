@@ -1,1 +1,1 @@
-Repo containing non-AI typed code written to solve problems in [link](https://github.com/joshuaroy873/learn-cpp.git) to learn CPP (and C someday).
+Repo containing non-AI typed code written to solve problems in [link](https://www.geeksforgeeks.org/cpp/cpp-exercises/) to learn CPP (and C someday).
