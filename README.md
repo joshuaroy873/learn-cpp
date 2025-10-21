@@ -1,1 +1,1 @@
-Repo containing non-AI typed code written to solve problems in [link](https://www.geeksforgeeks.org/cpp/cpp-exercises/) to learn CPP (and C someday).
+Repo containing non-AI, vim-typed C++ code written to solve problems in [link](https://www.geeksforgeeks.org/cpp/cpp-exercises/) to refresh CPP (C coming soon!).
