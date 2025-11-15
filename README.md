@@ -1,4 +1,4 @@
-Repo containing non-AI C++ code written to solve practice problems to refresh CPP.
+Repo containing non-AI Vim-typed C++ code written to solve practice problems to refresh CPP.
 
 *Reason*: While solving Leetcode problems, I noticed myself googling syntaxes so much that it wasn't improving my coding skills.
 
