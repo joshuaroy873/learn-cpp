@@ -1,7 +1,10 @@
-Repo containing non-AI, vim-typed C++ code written to solve practice problems in [link](https://www.geeksforgeeks.org/cpp/cpp-exercises/) to refresh CPP.
+Repo containing non-AI C++ code written to solve practice problems to refresh CPP.
 
 *Reason*: While solving Leetcode problems, I noticed myself googling syntaxes so much that it wasn't improving my coding skills.
 
-Planning to do the following next in this repo:
-- Leetcode problems
-- C language practice problems
+`buildCpp.sh` automates building, execution and deleting execulable for cpp files.
+- Usage: Run `./buildCpp.sh <source-file.cpp>` to compile, execute, and automatically remove the generated executable.
+- Make `buildCpp.sh` executable the first time with `chmod +x buildCpp.sh`.
+
+Practice problems:
+[Geekforgeeks](https://www.geeksforgeeks.org/cpp/cpp-exercises/) 
