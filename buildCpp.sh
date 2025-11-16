@@ -16,9 +16,11 @@ g++ "$INPUT_FILE" -o "$EXECUTABLE_NAME"
 # Check if compilation was successful
 if [ $? -eq 0 ]; then
     echo "Compilation successful. Running $EXECUTABLE_NAME..."
+    echo ""
     # Run the compiled program
     ./"$EXECUTABLE_NAME"
-
+    echo ""
+    echo ""
     # Delete executable after running
     if [ -f "$EXECUTABLE_NAME" ]; then
         echo "Cleaning up: removing executable $EXECUTABLE_NAME"
