@@ -11,7 +11,7 @@ EXECUTABLE_NAME="${INPUT_FILE%.cpp}" # Removes .cpp extension to get executable 
 
 # Compile the C++ program
 echo "Compiling $INPUT_FILE..."
-g++ "$INPUT_FILE" -o "$EXECUTABLE_NAME"
+g++ -I. "$INPUT_FILE" -o "$EXECUTABLE_NAME"
 
 # Check if compilation was successful
 if [ $? -eq 0 ]; then

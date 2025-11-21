@@ -1,7 +1,4 @@
-#include<iostream>
-#include<vector>
-#include<string>
-#include<algorithm>
+#include<bits/stdc++.h>
 
 int main()
 {
@@ -65,3 +62,5 @@ int main()
 
     return 0;
 }
+
+// XOR is parity of #1s in a boolean vector
