@@ -1,66 +1,50 @@
 #include<bits/stdc++.h>
+using namespace std;
 
 int main()
 {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
     int t;
-    std::cin >> t;
-    std::vector<std::string> results(t);
-
-    for (int i = 0; i < t; ++i)
+    cin >> t;
+    vector<string> results(t);
+    for (int test = 0; test < t; test++)
     {
         int n;
-        std::cin >> n;
-        std::string a = "", b = "";
-
-        for (int j=0; j< n; j++)
+        cin >> n;
+        vector<int> a(n), b(n);
+        vector<int> Xor(n);
+        int XorSum = 0;
+        for (int i = 0; i < n; i++)
+            cin >> a[i];
+        for (int i = 0; i < n; i++)
+            cin >> b[i];
+        for (int i = 0; i < n; i++)
         {
-            std::cin >> a[j];
+            XorSum = XorSum ^ a[i] ^ b[i];
+            Xor[i] = a[i] ^ b[i];
         }
-        for (int j=0; j< n; j++)
+        if (XorSum)
         {
-            std::cin >> b[j];
+            for (int i = n-1; i>=0; i--)
+            {
+                if (Xor[i]==1 && i%2==0)
+                {
+                    results[test] = "Ajisai";
+                    break;
+                }
+                if (Xor[i]==1 && i%2==1) 
+                {
+                    results[test] = "Mai";
+                    break;
+                }
+            }
         }
-
-        std::string Xor = "";
-        for (int j=0; j< n; j++)
-        {
-            if (a[j] == b[j])
-                Xor += '0';
-            else
-                Xor += '1';
-        }
-
-        int a_result = 0, b_result = 0;
-
-        // Count '1's in odd positions (1, 3, 5, ...)
-        for (size_t j=1; j < Xor.length(); j+=2)
-        {
-            if (Xor[j] == '1')
-                b_result++;
-        }
-
-        // Count '1's in even positions (0, 2, 4, ...)
-        for (size_t j=0; j < Xor.length(); j+=2)
-        {
-            if (Xor[j] == '1')
-                a_result++;
-        }
-
-        if (a_result == b_result)
-            results[i] = "Tie";
-        else if (a_result > b_result)
-            results[i] = "Ajisai";
-        else
-            results[i] = "Mai";    
-
+        else results[test] = "Tie";
     }
 
-    for (const auto& result : results)
-    {
-        std::cout << result << std::endl;
-    }
+    for (auto& res:results)
+        cout << res << '\n';
 
     return 0;
 }
-
-// XOR is parity of #1s in a boolean vector
